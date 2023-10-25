@@ -29,19 +29,19 @@ export const NavLinks = [
 
 export const HeroTexts = [
     {
-        Heading: "Unleash Your Inner Strength!",
-        Paragraph: "Welcome to GymNex, where fitness meets fun! Get ready to unleash your inner strength and transform your life!",
-        Button: "Join Now!"
+        Heading: "Liberte sua força interior!",
+        Paragraph: "Bem-vindo ao GymNex, onde o condicionamento físico encontra a diversão! Prepare-se para liberar sua força interior e transformar sua vida!",
+        Button: "Entre Já!"
     },
     {
-        Heading: "New Heights of Fitness!",
-        Paragraph: "Push your limits and achieve greatness at our gym! Join our supportive community and embark on a journey of self-improvement and empowerment!",
-        Button: "Sign Up Today!"
+        Heading: "Novos patamares de condicionamento físico!",
+        Paragraph: "Supere seus limites e alcance a grandeza em nossa academia! Junte-se à nossa comunidade de apoio e embarque em uma jornada de autoaperfeiçoamento e capacitação!",
+        Button: "cadastre-se hoje!"
     },
     {
-        Heading: "Fitness is Fun with Us!",
-        Paragraph: "At our gym, fitness is not just a routine; it's an enjoyable adventure! Join us in this fitness expedition, where fun and results go hand in hand!",
-        Button: "Enroll Now!"
+        Heading: "Fitness é divertido conosco!",
+        Paragraph: "Na nossa academia, o condicionamento físico não é apenas uma rotina; é uma aventura divertida! Junte-se a nós nesta expedição fitness, onde diversão e resultados andam de mãos dadas!",
+        Button: "Inscreva-se agora!"
     }
 ]
 
