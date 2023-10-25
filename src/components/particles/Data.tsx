@@ -30,7 +30,7 @@ export const NavLinks = [
 export const HeroTexts = [
     {
         Heading: "Liberte sua força interior!",
-        Paragraph: "Bem-vindo ao GymNex, onde o condicionamento físico encontra a diversão! Prepare-se para liberar sua força interior e transformar sua vida!",
+        Paragraph: "Bem-vindo ao Rocha - Compras Inteligentes, onde o condicionamento físico encontra a diversão! Prepare-se para liberar sua força interior e transformar sua vida!",
         Button: "Entre Já!"
     },
     {
@@ -47,10 +47,10 @@ export const HeroTexts = [
 
 
 export const AboutTexts = {
-    firstText: "About GymNex",
+    firstText: "About Rocha - Compras Inteligentes",
     secondText: "Welcome",
-    caption: "Welcome to GymNex, where fitness meets community and transformation happens!",
-    paragraph1: "At GymNex, we are more than just a gym; we are a passionate and supportive fitness family dedicated to helping you achieve your health and wellness goals. Our mission is to create a positive and empowering environment that inspires you to challenge yourself, embrace a healthy lifestyle, and discover the best version of yourself.",
+    caption: "Welcome to Rocha - Compras Inteligentes, where fitness meets community and transformation happens!",
+    paragraph1: "At Rocha - Compras Inteligentes, we are more than just a gym; we are a passionate and supportive fitness family dedicated to helping you achieve your health and wellness goals. Our mission is to create a positive and empowering environment that inspires you to challenge yourself, embrace a healthy lifestyle, and discover the best version of yourself.",
 }
 
 export const OfferTexts = {

@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { ArrowCircleRight, Barbell, CirclesFour } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 import { Text } from "../atoms/Text";
+import Logo from "../../assets/images/logo.png";
 
 
 const NavBar = () => {
@@ -33,11 +34,12 @@ const NavBar = () => {
         <header className="w-full h-auto bg-transparent overflow-x-hidden fixed z-50 top-0 left-0">
             <nav className={`w-full lg:h-28 md:h-24 h-20 ${navBarColor ? "bg-zinc-900" : " bg-transparent"} lg:px-16 md:px-9 px-8 flex justify-between items-center`}>
                 <Link to={`/`} className="font-extrabold flex items-center relative md:text-2xl text-lg">
-                    <Text as="span" className="text-amber-500 absolute -top-3 md:left-5 left-3">
+                    <img src={Logo} alt="logo" className="w-20 h-20" />
+                    {/* <Text as="span" className="text-amber-500 absolute -top-3 md:left-5 left-3">
                         <Barbell size={25} color="currentColor" weight="fill" />
                     </Text>
                     <Text as="span" className="text-white">Gym</Text>
-                    <Text as="span" className="bg-gradient-to-r from-amber-500 to-red-500 bg-clip-text text-transparent">Nex</Text>
+                    <Text as="span" className="bg-gradient-to-r from-amber-500 to-red-500 bg-clip-text text-transparent">Nex</Text> */}
                 </Link>
                 <div className="lg:flex hidden items-center h-full gap-20">
                     <ul className="flex items-center justify-center h-full gap-4 relative before:w-full before:h-0.5 before:absolute before:bottom-0 before:left-0 before:bg-zinc-400">
