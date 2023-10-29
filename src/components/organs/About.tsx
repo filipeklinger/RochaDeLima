@@ -1,9 +1,9 @@
 import { Fade } from "react-awesome-reveal";
-import Image1 from "../../assets/gym/2.jpeg";
-import Image2 from "../../assets/gym/3.jpeg";
-import Image3 from "../../assets/gym/4.jpeg";
-import Image4 from "../../assets/gym/5.jpeg";
-import { Image } from "../atoms/Image";
+// import Image1 from "../../assets/gym/2.jpeg";
+// import Image2 from "../../assets/gym/3.jpeg";
+// import Image3 from "../../assets/gym/4.jpeg";
+// import Image4 from "../../assets/gym/5.jpeg";
+// import { Image } from "../atoms/Image";
 import { Text } from "../atoms/Text";
 import { AboutTexts } from "../particles/Data";
 
@@ -23,10 +23,10 @@ const About = () => {
                     </Fade>
                 </div>
                 <div className="w-full md:h-[400px] h-[300px] md:order-2 order-1 grid grid-cols-3 grid-rows-3">
-                    <Image alt="Welcome Image" objectCover="object-cover" className="col-span-3 row-span-2 w-full h-full" image={Image1} />
+                    {/* <Image alt="Welcome Image" objectCover="object-cover" className="col-span-3 row-span-2 w-full h-full" image={Image1} />
                     <Image alt="Welcome Image" objectCover="object-cover" className="w-full h-full" image={Image2} />
                     <Image alt="Welcome Image" objectCover="object-cover" className="w-full h-full border border-amber-500" image={Image3} />
-                    <Image alt="Welcome Image" objectCover="object-cover" className="w-full h-full" image={Image4} />
+                    <Image alt="Welcome Image" objectCover="object-cover" className="w-full h-full" image={Image4} /> */}
                 </div>
             </main>
 

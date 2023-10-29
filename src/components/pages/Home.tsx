@@ -1,33 +1,27 @@
 import About from "../organs/About"
-import Blogs from "../organs/Blogs"
-import Calculator from "../organs/Calculator"
-import Contact from "../organs/Contact"
 import HeroSection from "../organs/HeroSection"
-import Membership from "../organs/Membership"
-import Offers from "../organs/Offers"
-import Testimonials from "../organs/Testimonials"
 
 import HeroImg1 from "../../assets/hero/compras1.jpg";
-import HeroImg2 from "../../assets/hero/compras2.jpg";
+import HeroImg2 from "../../assets/hero/compras2.gif";
 import HeroImg3 from "../../assets/hero/compras3.jpg";
 
 const Home = () => {
     const HeroTexts = [
         {
-            Heading: "string",
-            Paragraph: "string",
+            Heading: "Bem vindos ao nosso site!",
+            Paragraph: "aqui você encontra as melhores ofertas de imóveis da região",
             Button: "",
             image: HeroImg1,
         },
         {
-            Heading: "string",
-            Paragraph: "string",
+            Heading: "Financiamento facilitado",
+            Paragraph: "com as melhores taxas do mercado",
             Button: "",
             image: HeroImg2,
         },
         {
-            Heading: "string",
-            Paragraph: "string",
+            Heading: "Compra de imóveis",
+            Paragraph: "com a melhor assessoria do mercado",
             Button: "",
             image: HeroImg3,
         }
@@ -36,12 +30,12 @@ const Home = () => {
         <>
             <HeroSection HeroTexts={HeroTexts} />
             <About />
-            <Offers />
-            <Membership />
-            <Calculator />
-            <Testimonials />
-            <Blogs />
-            <Contact />
+            {/* <Offers /> */}
+            {/* <Membership /> */}
+            {/* <Calculator /> */}
+            {/* <Testimonials /> */}
+            {/* <Blogs /> */}
+            {/* <Contact /> */}
         </>
     )
 }
