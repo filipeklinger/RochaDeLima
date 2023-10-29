@@ -7,11 +7,34 @@ import Membership from "../organs/Membership"
 import Offers from "../organs/Offers"
 import Testimonials from "../organs/Testimonials"
 
+import HeroImg1 from "../../assets/hero/1.png";
+import HeroImg2 from "../../assets/hero/2.png";
+import HeroImg3 from "../../assets/hero/3.png";
 
 const Home = () => {
+    const HeroTexts = [
+        {
+            Heading: "string",
+            Paragraph: "string",
+            Button: "string",
+            image: HeroImg1,
+        },
+        {
+            Heading: "string",
+            Paragraph: "string",
+            Button: "string",
+            image: HeroImg2,
+        },
+        {
+            Heading: "string",
+            Paragraph: "string",
+            Button: "string",
+            image: HeroImg3,
+        }
+    ];
     return (
         <>
-            <HeroSection />
+            <HeroSection HeroTexts={HeroTexts} />
             <About />
             <Offers />
             <Membership />

@@ -8,6 +8,7 @@ import { animateScroll } from "react-scroll";
 import NavBar from "./components/organs/NavBar"
 import Home from "./components/pages/Home";
 import Footer from "./components/organs/Footer";
+import { AureaResidencial } from "./components/pages/empreendimentos/AureaResidencial";
 
 
 
@@ -21,10 +22,11 @@ function App() {
   }, [directory.pathname]);
 
   return (
-    <div className="w-full h-full bg-zinc-900 font-nunito relative">
+    <div className="w-full h-full bg-zinc-900 text-white font-nunito relative">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/aurea-residencial" element={<AureaResidencial />} />
       </Routes>
       <Footer />
     </div>

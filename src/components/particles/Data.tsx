@@ -4,23 +4,15 @@ export const NavLinks = [
         url: "/"
     },
     {
+        name: "Aurea Residencial",
+        url: "/aurea-residencial"
+    },
+    {
         name: "About Us",
         url: "/about"
     },
     {
-        name: "Schedule",
-        url: "/schedule"
-    },
-    {
-        name: "Gallery",
-        url: "/gallery"
-    },
-    {
-        name: "News",
-        url: "/news"
-    },
-    {
-        name: "Contacts",
+        name: "Contato",
         url: "/contact"
     },
 ];
@@ -158,29 +150,17 @@ export const BlogTexts = {
 }
 
 export const FooterTexts = {
-    underLogoText: "We are more than just a gym; we are a passionate and supportive fitness family dedicated to helping you achieve your health and wellness goals. Our mission is to create a positive and empowering environment that inspires you to challenge yourself, embrace a healthy lifestyle, and discover the best version of yourself.",
+    underLogoText: "",
     quickLinks: {
-        caption: "Quick Links",
+        caption: "Links",
         links: [
             {
                 name: "Home",
                 url: "/"
             },
             {
-                name: "About Us",
-                url: "/about"
-            },
-            {
-                name: "Schedule",
-                url: "/schedule"
-            },
-            {
-                name: "Gallery",
-                url: "/gallery"
-            },
-            {
-                name: "News",
-                url: "/news"
+                name: "Aurea Residencial",
+                url: "/aurea-residencial"
             },
             {
                 name: "Contacts",
@@ -189,18 +169,18 @@ export const FooterTexts = {
         ]
     },
     contacts: {
-        caption: "Quick Contacts",
+        caption: "Contatos",
         names: [
             {
-                name: "11567 Santa Monica Blvd, Los Angeles, CA 90025, United States",
+                name: "Nova Iguaçu, Rio de Janeiro, Brasil",
             },
             {
-                name: "gym_nex@example.com",
+                name: "",
             },
             {
-                name: "+1 424-248-8496",
+                name: "",
             }
         ]
     },
-    copyright: "Copyright 2023. All Right Reserved"
+    copyright: `Rocha de Lima Consultoria imobiliária Copyright ${new Date().getUTCFullYear()}. All Right Reserved"`
 }

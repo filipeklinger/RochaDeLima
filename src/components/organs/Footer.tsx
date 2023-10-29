@@ -1,37 +1,28 @@
 import { Link } from "react-router-dom"
 import { Text } from "../atoms/Text"
-import { Barbell, EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react"
+import { MapPin, Phone } from "@phosphor-icons/react"
 import { FooterTexts } from "../particles/Data"
 import { List } from "../atoms/List"
-import { useCallback } from "react"
 
 
 const Footer = () => {
 
-
-    const renderIcon = useCallback((element: number) => {
-        switch (element) {
-            case 0:
-                return <MapPin size={20} color="currentColor" />;
-            case 1:
-                return <EnvelopeSimple size={20} color="currentColor" />;
-            case 2:
-                return <Phone size={20} color="currentColor" />
-        }
-    }, [])
+    function openWhatsapp() {
+        const phone = "+5521975749247";
+        window.open(`https://api.whatsapp.com/send?phone=${phone}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20empreendimento%20Aurea%20Residencial.`, "_blank");
+    }
 
     return (
         <footer className="w-full bg-zinc-950 flex flex-col">
             <main className="w-full lg:pt-28 lg:pb-12 pt-20 pb-12 px-6 grid md:grid-cols-3 lg:gap-8 md:gap-5 gap-8 lg:px-32">
                 <div className="flex flex-col gap-2">
                     <Link to={`/`} className="font-extrabold flex items-center relative md:text-3xl text-2xl">
-                        <Text as="span" className="text-amber-500 absolute -top-5 md:left-5 left-3">
-                            <Barbell size={35} color="currentColor" weight="fill" />
-                        </Text>
-                        <Text as="span" className="text-white">Gym</Text>
-                        <Text as="span" className="bg-gradient-to-r from-amber-500 to-red-500 bg-clip-text text-transparent">Nex</Text>
+
+                        <Text as="span" className="text-white">Rocha de lima</Text>
                     </Link>
-                    <Text as="p" className="text-zinc-400 text-justify">{FooterTexts.underLogoText}</Text>
+                    <Text as="p" className="text-zinc-400 text-justify">
+                        Rocha de lima é uma consultoria imobiliária que atua no mercado de imóveis novos e/ou na planta, com o objetivo de oferecer aos seus clientes um serviço de qualidade e confiança.
+                    </Text>
                 </div>
 
                 {/* Quick Links  */}
@@ -52,14 +43,20 @@ const Footer = () => {
                 <div className="flex flex-col md:mt-8 gap-6">
                     <Text as="h1" className="text-zinc-300 text-2xl font-bold">{FooterTexts.contacts.caption}</Text>
                     <ul className="flex flex-col gap-4">
-                        {
-                            FooterTexts.contacts.names.map((name, index) => (
-                                <List className="text-zinc-400 flex items-start gap-2" key={index}>
-                                    <Text as="span" className="text-amber-500 mt-1">{renderIcon(index)}</Text>
-                                    <Text as="span" className="">{name.name}</Text>
-                                </List>
-                            ))
-                        }
+                        <List className="text-zinc-400 flex items-start gap-2" >
+                            <Text as="span" className="text-amber-500 mt-1"><MapPin size={20} color="currentColor" /></Text>
+                            <Text as="span" className="">Nova Iguaçu, Rio de Janeiro, Brasil</Text>
+                        </List>
+                        {/* <List className="text-zinc-400 flex items-start gap-2" >
+                            <Text as="span" className="text-amber-500 mt-1"><EnvelopeSimple size={20} color="currentColor" /></Text>
+                            <Text as="span" className=""></Text>
+                        </List> */}
+                        <List className="text-zinc-400 flex items-start gap-2" >
+                            <div className="flex items-start gap-2 cursor-pointer" onClick={openWhatsapp}>
+                                <Text as="span" className="text-amber-500 mt-1"><Phone size={20} color="currentColor" /></Text>
+                                <Text as="span" className="">(21) 9 7574-9247</Text>
+                            </div>
+                        </List>
                     </ul>
                 </div>
             </main>
