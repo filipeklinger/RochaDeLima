@@ -3,14 +3,12 @@ import { Text } from "../atoms/Text"
 import { MapPin, Phone } from "@phosphor-icons/react"
 import { FooterTexts } from "../particles/Data"
 import { List } from "../atoms/List"
+import { openWhatsapp } from "../../utils/contactUtils"
 
 
 const Footer = () => {
 
-    function openWhatsapp() {
-        const phone = "+5521975749247";
-        window.open(`https://api.whatsapp.com/send?phone=${phone}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20empreendimento%20Aurea%20Residencial.`, "_blank");
-    }
+    
 
     return (
         <footer className="w-full bg-zinc-950 flex flex-col">
@@ -52,7 +50,7 @@ const Footer = () => {
                             <Text as="span" className=""></Text>
                         </List> */}
                         <List className="text-zinc-400 flex items-start gap-2" >
-                            <div className="flex items-start gap-2 cursor-pointer" onClick={openWhatsapp}>
+                            <div className="flex items-start gap-2 cursor-pointer" onClick={()=>openWhatsapp("Gostaria de conhecer os empreendimentos disponíveis.")}>
                                 <Text as="span" className="text-amber-500 mt-1"><Phone size={20} color="currentColor" /></Text>
                                 <Text as="span" className="">(21) 9 7574-9247</Text>
                             </div>

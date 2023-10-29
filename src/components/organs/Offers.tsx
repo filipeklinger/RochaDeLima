@@ -1,7 +1,7 @@
 // import { Image } from "../atoms/Image"
 // import Offer from "../../assets/hero/3.jpeg"
 import { Text } from "../atoms/Text"
-import { OfferTexts } from "../particles/Data"
+// import { OfferTexts } from "../particles/Data"
 import { List } from "../atoms/List"
 import { useCallback } from "react"
 import { Barbell, Hoodie, PersonSimpleRun } from "@phosphor-icons/react"
@@ -9,7 +9,24 @@ import { Fade } from "react-awesome-reveal"
 
 
 const Offers = () => {
-
+    const OfferTexts = {
+        firstText: "Nossos Serviços",
+        secondText: "O que fazemos",
+        list: [
+            {
+                listCaption: "Venda de imóveis",
+                text: "A Rocha de Lima Consultoria Imobiliária é especializada na venda de imóveis das maiores construtoras do país, como a MRV e Direcional. Nossa missão é tornar a aquisição de sua nova casa uma experiência descomplicada e gratificante. Entendemos que encontrar o lar perfeito é uma jornada única, e estamos aqui para orientá-lo em cada passo do caminho."
+            },
+            {
+                listCaption: "Financiamento",
+                text: "Um dos nossos principais diferenciais é a nossa especialização em financiamentos através da Caixa Econômica Federal, tornando o processo de aquisição de imóveis mais acessível e viável para todos. Além disso, oferecemos orientação especializada sobre os programas habitacionais do governo, como o “Minha Casa, Minha Vida,” o que pode resultar em subsídios significativos, dependendo da sua renda."
+            },
+            {
+                listCaption: "Assessoria",
+                text: "Na Rocha de Lima Consultoria Imobiliária, valorizamos a transparência, a ética e a dedicação aos nossos clientes. Nossa equipe de profissionais qualificados está pronta para ajudá-lo a encontrar o imóvel perfeito para você e sua família, com a melhor assessoria do mercado."
+            }
+        ]
+    }
     const renderIcon = useCallback((element: number) => {
         switch (element) {
             case 0:
@@ -34,7 +51,7 @@ const Offers = () => {
                         <div className="w-full flex flex-col mt-10 lg:mt-24 items-center relative before:absolute before:-bottom-6 before:left-38 before:w-20 before:h-1 before:rounded-lg before:bg-gradient-to-r before:from-amber-500 before:to-red-500 z-10">
                             <Text as="p" className="text-amber-500 lg:text-sm text-xs tracking-widest uppercase font-medium">{OfferTexts.firstText}</Text>
                             <Text as="h1" className="text-zinc-100 lg:text-5xl md:text-4xl text-3xl">{OfferTexts.secondText}</Text>
-                            <Text as="h1" className="absolute text-zinc-500/10 lg:left-48 md:left-32 left-36 lg:text-9xl md:text-7xl text-6xl font-extrabold lg:-top-32 md:-top-20 -top-16 -z-10">02</Text>
+                            
                         </div>
                         <ul className="flex flex-col lg:gap-8 gap-6 pb-16">
                             {
