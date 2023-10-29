@@ -99,7 +99,8 @@ export function AureaResidencial() {
         firstText: "Contato",
         phone: "(21) 9 7574-9247",
         paragraph: "Entre em contato conosco para saber mais sobre o Aurea Residencial.",
-        button: "Ligue agora"
+        button: "Faça uma simulação",
+        whatsappMsg: "Olá, gostaria de fazer uma simulação para o Aurea Residencial."
     }
     return (
         <div className="min-h-screen">
