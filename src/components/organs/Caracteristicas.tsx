@@ -1,6 +1,4 @@
 import { Text } from "../atoms/Text"
-import { TestimonialTexts } from "../particles/Data";
-
 
 const Caracteristicas = () => {
 
