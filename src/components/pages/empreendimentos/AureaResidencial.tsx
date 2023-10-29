@@ -2,11 +2,11 @@
 import Caracteristicas from '../../organs/Caracteristicas';
 import HeroSlider from '../../organs/HeroSlider';
 
-import Fachada from '../../../assets/images/empreendimentos/aurea-residencial/fachada.png';
-import FachadaNoturna from '../../../assets/images/empreendimentos/aurea-residencial/fachada-noturna.png';
-import Piscina from '../../../assets/images/empreendimentos/aurea-residencial/piscina.png';
-import Academia from '../../../assets/images/empreendimentos/aurea-residencial/academia.png';
-import QuadraEsportes from '../../../assets/images/empreendimentos/aurea-residencial/quadra-esportes-infantil.png';
+import Fachada from '../../../assets/images/empreendimentos/aurea-residencial/fachada.jpg';
+import FachadaNoturna from '../../../assets/images/empreendimentos/aurea-residencial/fachada-noturna.jpg';
+import Piscina from '../../../assets/images/empreendimentos/aurea-residencial/piscina.jpg';
+import Academia from '../../../assets/images/empreendimentos/aurea-residencial/academia.jpg';
+import QuadraEsportes from '../../../assets/images/empreendimentos/aurea-residencial/quadra-esportes-infantil.jpg';
 export function AureaResidencial() {
     const HeroTexts = [
         {
