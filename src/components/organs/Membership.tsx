@@ -2,7 +2,6 @@ import { openWhatsapp } from "../../utils/contactUtils"
 import { List } from "../atoms/List"
 import { Text } from "../atoms/Text"
 import { Card } from "../molecules/Card"
-// import { MembershipPlans } from "../particles/Data"
 
 export type MembershipType = {
     firstText: string;

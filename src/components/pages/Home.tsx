@@ -3,7 +3,6 @@ import HeroSection from "../organs/HeroSection"
 
 import HeroImg1 from "../../assets/hero/compras1.jpg";
 import HeroImg2 from "../../assets/hero/compras2.gif";
-import HeroImg3 from "../../assets/hero/compras3.jpg";
 import Offers from "../organs/Offers";
 import Membership from "../organs/Membership";
 
@@ -21,12 +20,7 @@ const Home = () => {
             Button: "",
             image: HeroImg2,
         },
-        {
-            Heading: "Compra de imóveis",
-            Paragraph: "com a melhor assessoria do mercado",
-            Button: "",
-            image: HeroImg3,
-        }
+        
     ];
     const MembershipPlans = {
         firstText: "Empreendimentos",
