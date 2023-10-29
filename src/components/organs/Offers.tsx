@@ -1,4 +1,4 @@
-import { Image } from "../atoms/Image"
+// import { Image } from "../atoms/Image"
 // import Offer from "../../assets/hero/3.jpeg"
 import { Text } from "../atoms/Text"
 import { OfferTexts } from "../particles/Data"
