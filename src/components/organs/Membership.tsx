@@ -8,7 +8,7 @@ export type MembershipType = {
     secondText: string;
     cards: {
         amount: number;
-        duration: string;
+        unity: string;
         caption: string;
         benefits: string[];
         contactMsg: string;
@@ -31,8 +31,8 @@ const Membership = ({ MembershipPlans }: { MembershipPlans: MembershipType }) =>
                                 <Text as="h3" className={`capitalize text-base font-semibold w-full py-2 text-center  text-zinc-100 my-3 ${card.caption.includes('12') ? "bg-gradient-to-r to-amber-500 from-red-500" : "bg-zinc-800"}`}>{card.caption}</Text>
                                 <Text as="h2" className="text-zinc-100 flex items-end gap-0.5">
                                     {card.amount > 0 && <span className="font-extrabold text-2xl">R$</span>}
-                                    <span className={`font-extrabold "text-5xl"`}>{card.amount === 0 ? "Consulte condições" : card.amount}</span>
-                                    {card.amount > 0 && <span className="font-medium text-lg">/{card.duration}</span>}
+                                    <span className={`font-extrabold "text-6xl"`}>{card.amount === 0 ? "Consulte condições" : card.amount}</span>
+                                    {card.amount > 0 && <span className="font-medium text-lg">{card.unity}</span>}
                                 </Text>
 
 

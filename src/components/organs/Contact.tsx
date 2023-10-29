@@ -1,14 +1,19 @@
 import { Image } from "../atoms/Image"
-import ContactImg from "../../assets/gym/4.jpeg"
+import Compras2 from "../../assets/hero/compras2.gif"
 import { Text } from "../atoms/Text"
-import { ContactTexts } from "../particles/Data"
 import { Button } from "../atoms/Button"
 
-
-const Contact = () => {
+type ContactTextsType= {
+    firstText: string;
+    phone: string;
+    paragraph: string;
+    button: string;
+}
+const Contact = ({ContactTexts}: {ContactTexts: ContactTextsType}) => {
+    
     return (
         <section className="w-full md:h-[400px] h-[500px] relative">
-            <Image alt="Contact Image" className="w-full h-full" objectCover="object-cover object-top" image={ContactImg} />
+            <Image alt="Contact Image" className="w-full h-full" objectCover="object-cover object-top" image={Compras2} />
             <div className="w-full h-full absolute top-0 left-0 bg-zinc-900/70 flex flex-col justify-center items-center gap-2">
                 <Text as="p" className="tracking-widest text-amber-500 uppercase md:text-sm text-xs font-medium">
                     {ContactTexts.firstText}

@@ -7,7 +7,6 @@ import { useCallback } from "react"
 import { Barbell, Hoodie, PersonSimpleRun } from "@phosphor-icons/react"
 import { Fade } from "react-awesome-reveal"
 
-
 const Offers = () => {
     const OfferTexts = {
         firstText: "Nossos Serviços",

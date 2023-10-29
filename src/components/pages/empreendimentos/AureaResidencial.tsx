@@ -7,6 +7,11 @@ import FachadaNoturna from '../../../assets/images/empreendimentos/aurea-residen
 import Piscina from '../../../assets/images/empreendimentos/aurea-residencial/piscina.jpg';
 import Academia from '../../../assets/images/empreendimentos/aurea-residencial/academia.jpg';
 import QuadraEsportes from '../../../assets/images/empreendimentos/aurea-residencial/quadra-esportes-infantil.jpg';
+import AureaLogo from '../../../assets/images/empreendimentos/aurea-residencial/aurea-logo.webp';
+import Membership from '../../organs/Membership';
+import PromotionalVideo from '../../organs/PromotionalVideo';
+import Contact from '../../organs/Contact';
+
 export function AureaResidencial() {
     const HeroTexts = [
         {
@@ -39,12 +44,77 @@ export function AureaResidencial() {
             Button: "string",
             image: QuadraEsportes,
         },
-        
+
     ];
-    return(
+    const MembershipPlans = {
+        firstText: "Disponibilidade",
+        secondText: "Escolha o melhor para você",
+        cards: [
+            {
+                amount: 280,
+                unity: "mil",
+                caption: "3 quartos a partir de",
+                benefits: [
+                    "Condomínio com lazer completo",
+                    "3 quartos",
+                    "vaga de garagem",
+                    "piscina",
+                    "playground",
+                    "salão de festas",
+                    "quadra poliesportiva",
+                    "academia",
+
+                ],
+                contactMsg: "Gostaria de saber mais sobre os apartamentos de 3 quartos no Aurea Residencial."
+            },
+            {
+                amount: 1.879,
+                unity: "/mês",
+                caption: "2 quartos a partir de",
+                benefits: [
+                    "Condomínio com lazer completo",
+                    "3 quartos",
+                    "vaga de garagem",
+                    "piscina",
+                    "playground",
+                    "salão de festas",
+                    "quadra poliesportiva",
+                    "academia",
+                ],
+                contactMsg: "Gostaria de saber mais sobre os apartamentos de 2 quartos no Aurea Residencial."
+            },
+        ]
+    }
+    const TourVideoTexts = {
+        firstText: "Tour Virtual",
+        paragraph: "Conheça o empreendimento sem sair de casa.",
+        videoUrl: "https://www.youtube.com/embed/hAakwQTAtxk?si=y6-aH7HSVihumIGS"
+    }
+    const PromotionalVideoTexts = {
+        firstText: "Conheça o condomínio",
+        paragraph: "",
+        videoUrl: "https://www.youtube.com/embed/p6Z1a4u4byM?si=FmFShYFNvQnh-1W-"
+    }
+    const ContactTexts = {
+        firstText: "Contato",
+        phone: "(21) 9 7574-9247",
+        paragraph: "Entre em contato conosco para saber mais sobre o Aurea Residencial.",
+        button: "Ligue agora"
+    }
+    return (
         <div className="min-h-screen">
-            <HeroSlider HeroTexts={HeroTexts} />
+            <HeroSlider HeroTexts={HeroTexts} >
+                <div className="w-screen bg-[#EDAA04] p-5">
+                    <div className="pl-16 md:pl-36">
+                        <img src={AureaLogo} alt="Aurea logo" />
+                    </div>
+                </div>
+            </HeroSlider>
+            <PromotionalVideo PromotionalVideoTexts={TourVideoTexts} />
             <Caracteristicas />
+            <PromotionalVideo PromotionalVideoTexts={PromotionalVideoTexts} />
+            <Membership MembershipPlans={MembershipPlans} />
+            <Contact ContactTexts={ContactTexts} />
         </div>
     )
 }

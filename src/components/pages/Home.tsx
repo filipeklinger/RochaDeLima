@@ -5,6 +5,7 @@ import HeroImg1 from "../../assets/hero/compras1.jpg";
 import HeroImg2 from "../../assets/hero/compras2.gif";
 import Offers from "../organs/Offers";
 import Membership from "../organs/Membership";
+import Contact from "../organs/Contact";
 
 const Home = () => {
     const HeroTexts = [
@@ -20,7 +21,7 @@ const Home = () => {
             Button: "",
             image: HeroImg2,
         },
-        
+
     ];
     const MembershipPlans = {
         firstText: "Empreendimentos",
@@ -28,7 +29,7 @@ const Home = () => {
         cards: [
             {
                 amount: 499,
-                duration: "mensais",
+                unity: "/mensais",
                 caption: "Casas a partir de",
                 benefits: [
                     "Condomínio fechado",
@@ -39,7 +40,7 @@ const Home = () => {
             },
             {
                 amount: 600,
-                duration: "mensais",
+                unity: "/mensais",
                 caption: "Apartamentos a partir de",
                 benefits: [
                     "Condomínio com lazer completo",
@@ -56,7 +57,7 @@ const Home = () => {
             },
             {
                 amount: 0,
-                duration: "",
+                unity: "",
                 caption: "Empreendimentos prontos",
                 benefits: [
                     "Casas",
@@ -68,6 +69,12 @@ const Home = () => {
             }
         ]
     }
+    const ContactTexts = {
+        firstText: "Contato",
+        phone: "(21) 9 7574-9247",
+        paragraph: "Entre em contato conosco para conhecer as melhores ofertas de imóveis da região.",
+        button: "Ligue agora"
+    }
     return (
         <>
             <HeroSection HeroTexts={HeroTexts} />
@@ -77,7 +84,7 @@ const Home = () => {
             {/* <Calculator /> */}
             {/* <Testimonials /> */}
             {/* <Blogs /> */}
-            {/* <Contact /> */}
+            <Contact ContactTexts={ContactTexts} />
         </>
     )
 }

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { Image } from "../atoms/Image"
 
 import Slider from "react-slick";
@@ -14,7 +14,7 @@ export type HeroText = {
     Button: string;
     image: string;
 }
-export default function HeroSlider({ HeroTexts }: { HeroTexts: HeroText[] }) {
+export default function HeroSlider({ HeroTexts,children }: { HeroTexts: HeroText[],children?: React.ReactNode }) {
 
     const sliderRef = useRef<Slider | null>();
 
@@ -52,13 +52,7 @@ export default function HeroSlider({ HeroTexts }: { HeroTexts: HeroText[] }) {
     return (
         <section className="w-full h-auto bg-gradient-to-r from-red-500 to-amber-500 relative overflow-x-hidden">
             <div className="flex justify-start items-center lg:justify-center w-full lg:max-h-28 md:max-h-24 max-h-20">
-                <div className="w-screen bg-yellow-700 p-5">
-                    <div className="pl-16 md:pl-36">
-                        <h1 className="text-3xl md:text-6xl">Aurea </h1>
-                        <h6>Residencial</h6>
-                    </div>
-                </div>
-
+                {children}
             </div>
             <Slider ref={(slider) => (sliderRef.current = slider)} {...settings} className="h-full">
                 {
