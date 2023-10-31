@@ -4,7 +4,7 @@ import { Image } from "../atoms/Image"
 import Slider from "react-slick";
 import { Text } from "../atoms/Text";
 import { Button } from "../atoms/Button";
-import { ArrowCircleLeft, ArrowCircleRight, YoutubeLogo } from "@phosphor-icons/react";
+import { ArrowCircleLeft, ArrowCircleRight } from "@phosphor-icons/react";
 import StickyIcons from "../molecules/StickyIcons";
 import { Slide, Zoom } from "react-awesome-reveal";
 
@@ -66,7 +66,7 @@ const HeroSection = ({ HeroTexts }: { HeroTexts: HeroText[] }) => {
                                     </Slide>
                                 </Text>
                                 <div className="flex items-center gap-8">
-                                    <Slide direction="up">
+                                    {/* <Slide direction="up">
                                         <Button type="button" className="px-10 font-medium text-white py-2.5 bg-gradient-to-r whitespace-nowrap from-red-500 to-amber-500">
                                             {hero.Button}
                                         </Button>
@@ -76,7 +76,7 @@ const HeroSection = ({ HeroTexts }: { HeroTexts: HeroText[] }) => {
                                             <YoutubeLogo size={20} color="currentColor" weight="fill" />
                                             <Text as="span" className="text-zinc-100 group-hover:text-amber-500 uppercase text-xs">Watch reviews</Text>
                                         </a>
-                                    </Slide>
+                                    </Slide> */}
                                 </div>
                             </div>
                         </main>

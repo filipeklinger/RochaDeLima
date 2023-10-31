@@ -1,104 +1,25 @@
-export const NavLinks = [
-    {
-        name: "Home",
-        url: "/"
-    },
+import { FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
+export const NavLinks: {
+    name: string;
+    url: string;
+    type: "Building" | "House" ;
+}[] = [
     {
         name: "Aurea Residencial",
-        url: "/aurea-residencial"
+        url: "/aurea-residencial",
+        type: "Building"
     },
     {
         name: "Conquista Residencial",
-        url: "/conquista-residencial"
-    },
-    {
-        name: "About Us",
-        url: "/about"
-    },
-    {
-        name: "Contato",
-        url: "/contact"
+        url: "/conquista-residencial",
+        type: "Building"
     },
 ];
 
-
-
-export const HeroTexts = [
-    {
-        Heading: "Liberte sua força interior!",
-        Paragraph: "Bem-vindo ao Rocha - Compras Inteligentes, onde o condicionamento físico encontra a diversão! Prepare-se para liberar sua força interior e transformar sua vida!",
-        Button: "Entre Já!"
-    },
-    {
-        Heading: "Novos patamares de condicionamento físico!",
-        Paragraph: "Supere seus limites e alcance a grandeza em nossa academia! Junte-se à nossa comunidade de apoio e embarque em uma jornada de autoaperfeiçoamento e capacitação!",
-        Button: "cadastre-se hoje!"
-    },
-    {
-        Heading: "Fitness é divertido conosco!",
-        Paragraph: "Na nossa academia, o condicionamento físico não é apenas uma rotina; é uma aventura divertida! Junte-se a nós nesta expedição fitness, onde diversão e resultados andam de mãos dadas!",
-        Button: "Inscreva-se agora!"
-    }
+export const SocialMediaLinks = [
+    {name: "Facebook", url: "https://www.facebook.com/profile.php?id=100094881618902",icon: <FacebookLogo size={15} color="currentColor" weight="fill" />},
+    {name: "Instagram", url: "https://www.instagram.com/doceapemrv",icon: <InstagramLogo size={15} color="currentColor" weight="fill" />}
 ]
-
-
-export const AboutTexts = {
-    firstText: "About Rocha - Compras Inteligentes",
-    secondText: "Welcome",
-    caption: "Welcome to Rocha - Compras Inteligentes, where fitness meets community and transformation happens!",
-    paragraph1: "At Rocha - Compras Inteligentes, we are more than just a gym; we are a passionate and supportive fitness family dedicated to helping you achieve your health and wellness goals. Our mission is to create a positive and empowering environment that inspires you to challenge yourself, embrace a healthy lifestyle, and discover the best version of yourself.",
-}
-
-export const OfferTexts = {
-    firstText: "What we do",
-    secondText: "All Our Offer",
-    list: [
-        {
-            listCaption: "Weight Loose Programs",
-            text: "Our personalized approach, expert guidance, and proven results will help you achieve your fitness goals. Take the first step towards a transformed body and lifestyle today.",
-        },
-        {
-            listCaption: "Body Building Programs",
-            text: "Our expert trainers will guide you through tailored workouts, helping you achieve your bodybuilding goals efficiently and safely.",
-        }
-        , {
-            listCaption: "Different Special Classes",
-            text: "Take your workout to new heights with our high and intense Special Class, where you'll push your limits and achieve remarkable fitness results.",
-        }
-    ],
-}
-
-export const MembershipPlans = {
-    firstText: "Pricing Tables",
-    secondText: "Membership Plans",
-    cards: [
-        {
-            amount: 8,
-            duration: "day",
-            caption: "One Day Training",
-            benefits: ["One time access to all clubs", "Group trainer", "Book a Group class", "Fitness orientation"]
-        },
-        {
-            amount: 49,
-            duration: "month",
-            caption: "12 Months Membership",
-            benefits: ["Group classes", "Discuss fitness goals", "Group trainer", "Fitness orientation"]
-        },
-        {
-            amount: 65,
-            duration: "month",
-            caption: "Pay Every Month",
-            benefits: ["Group classes", "Discuss fitness goals", "Group trainer", "Fitness orientation"]
-        }
-    ]
-}
-
-export const ContactTexts = {
-    firstText: "call us today",
-    phone: "(+234)70-6910-6259",
-    paragraph: "At our gym, you can reach out to any of our trainers to schedule a session. Home services is also within the scope of out services. Your fitness is our concern! Health is wealth!",
-    button: "Schedule A Meet"
-}
 
 export const TestimonialTexts = {
     firstText: "our testimonials",
@@ -151,40 +72,4 @@ export const BlogTexts = {
             comments: "55"
         }
     ]
-}
-
-export const FooterTexts = {
-    underLogoText: "",
-    quickLinks: {
-        caption: "Links",
-        links: [
-            {
-                name: "Home",
-                url: "/"
-            },
-            {
-                name: "Aurea Residencial",
-                url: "/aurea-residencial"
-            },
-            {
-                name: "Contacts",
-                url: "/contact"
-            },
-        ]
-    },
-    contacts: {
-        caption: "Contatos",
-        names: [
-            {
-                name: "Nova Iguaçu, Rio de Janeiro, Brasil",
-            },
-            {
-                name: "",
-            },
-            {
-                name: "",
-            }
-        ]
-    },
-    copyright: `Rocha de Lima Consultoria imobiliária Copyright ${new Date().getUTCFullYear()}. All Right Reserved"`
 }

@@ -27,7 +27,7 @@ const Contact = ({ContactTexts}: {ContactTexts: ContactTextsType}) => {
                 <Text as="p" className="text-zinc-100 md:w-1/2 w-4/5 text-center text-lg my-6">
                     {ContactTexts.paragraph}
                 </Text>
-                <Button onClick={()=> openWhatsapp(ContactTexts.whatsappMsg)} className="flex justify-center items-center text-center px-10 font-medium text-white py-2.5 bg-gradient-to-r whitespace-nowrap from-red-500 to-amber-500" type="button">
+                <Button onClick={()=> openWhatsapp(ContactTexts.whatsappMsg)} className="flex justify-center items-center text-center px-10 font-medium text-white py-2.5 bg-gradient-to-r whitespace-nowrap from-red-500 to-amber-500 hover:text-red-500 hover:from-white hover:to-white" type="button">
                     {ContactTexts.button}<Buildings size={32} />
                 </Button>
             </div>

@@ -1,14 +1,36 @@
 import { Link } from "react-router-dom"
 import { Text } from "../atoms/Text"
-import { MapPin, Phone } from "@phosphor-icons/react"
-import { FooterTexts } from "../particles/Data"
+import { House, MapPin, Phone } from "@phosphor-icons/react"
 import { List } from "../atoms/List"
 import { openWhatsapp } from "../../utils/contactUtils"
+import { NavLinks, SocialMediaLinks } from "../particles/Data"
+import { Buildings } from "@phosphor-icons/react"
 
 
 const Footer = () => {
 
-    
+    const FooterTexts = {
+        underLogoText: "",
+        quickLinks: {
+            caption: "Empreendimentos",
+            links: [...NavLinks]
+        },
+        contacts: {
+            caption: "Contatos",
+            names: [
+                {
+                    name: "Nova Iguaçu, Rio de Janeiro, Brasil",
+                },
+                {
+                    name: "",
+                },
+                {
+                    name: "",
+                }
+            ]
+        },
+        copyright: `Rocha de Lima Consultoria imobiliária Copyright ${new Date().getUTCFullYear()}. All Right Reserved`
+    }
 
     return (
         <footer className="w-full bg-zinc-950 flex flex-col">
@@ -29,7 +51,14 @@ const Footer = () => {
                     <ul className="flex flex-col gap-2">
                         {
                             FooterTexts.quickLinks.links.map((link, index) => (
-                                <List className="text-zinc-400" key={index}>
+                                <List className="text-zinc-400 flex items-start gap-2" key={index}>
+                                    <Text as="span" className="text-amber-500 mt-1">
+                                        {
+                                            link.type === "Building" ?
+                                                <Buildings size={20} color="currentColor" /> :
+                                                <House size={20} color="currentColor" />
+                                        }
+                                    </Text>
                                     <Link to={link.url} className="transition-all duration-200 hover:text-red-500">{link.name}</Link>
                                 </List>
                             ))
@@ -45,16 +74,21 @@ const Footer = () => {
                             <Text as="span" className="text-amber-500 mt-1"><MapPin size={20} color="currentColor" /></Text>
                             <Text as="span" className="">Nova Iguaçu, Rio de Janeiro, Brasil</Text>
                         </List>
-                        {/* <List className="text-zinc-400 flex items-start gap-2" >
-                            <Text as="span" className="text-amber-500 mt-1"><EnvelopeSimple size={20} color="currentColor" /></Text>
-                            <Text as="span" className=""></Text>
-                        </List> */}
                         <List className="text-zinc-400 flex items-start gap-2" >
-                            <div className="flex items-start gap-2 cursor-pointer" onClick={()=>openWhatsapp("Gostaria de conhecer os empreendimentos disponíveis.")}>
+                            <div className="flex items-start gap-2 cursor-pointer" onClick={() => openWhatsapp("Gostaria de conhecer os empreendimentos disponíveis.")}>
                                 <Text as="span" className="text-amber-500 mt-1"><Phone size={20} color="currentColor" /></Text>
                                 <Text as="span" className="">(21) 9 7574-9247</Text>
                             </div>
                         </List>
+                        {SocialMediaLinks.map((link, index) => (
+                            <List className="text-zinc-400 flex items-start content-center gap-2" key={index}>
+                                <Text as="span" className="text-amber-500 mt-1">{link.icon}</Text>
+                                <a href={link.url} className="transition-all duration-200 hover:text-red-500">
+                                    {link.name}
+                                </a>
+                            </List>
+
+                        ))}
                     </ul>
                 </div>
             </main>
