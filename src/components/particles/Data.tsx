@@ -8,6 +8,10 @@ export const NavLinks = [
         url: "/aurea-residencial"
     },
     {
+        name: "Conquista Residencial",
+        url: "/conquista-residencial"
+    },
+    {
         name: "About Us",
         url: "/about"
     },

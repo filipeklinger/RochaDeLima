@@ -1,5 +1,5 @@
 
-import Caracteristicas from '../../organs/Caracteristicas';
+import Caracteristicas, { CaracteristicasTextTyte } from '../../organs/Caracteristicas';
 import HeroSlider from '../../organs/HeroSlider';
 
 import Fachada from '../../../assets/images/empreendimentos/aurea-residencial/fachada.jpg';
@@ -51,9 +51,9 @@ export function AureaResidencial() {
         secondText: "Escolha o melhor para você",
         cards: [
             {
-                amount: 280,
-                unity: "mil",
-                caption: "3 quartos a partir de",
+                amount: 0,
+                unity: "",
+                caption: "3 quartos",
                 benefits: [
                     "Condomínio com lazer completo",
                     "3 quartos",
@@ -68,12 +68,12 @@ export function AureaResidencial() {
                 contactMsg: "Gostaria de saber mais sobre os apartamentos de 3 quartos no Aurea Residencial."
             },
             {
-                amount: 1.879,
-                unity: "/mês",
+                amount: 280,
+                unity: "mil",
                 caption: "2 quartos a partir de",
                 benefits: [
                     "Condomínio com lazer completo",
-                    "3 quartos",
+                    "2 quartos",
                     "vaga de garagem",
                     "piscina",
                     "playground",
@@ -90,6 +90,19 @@ export function AureaResidencial() {
         paragraph: "Conheça o empreendimento sem sair de casa.",
         videoUrl: "https://www.youtube.com/embed/hAakwQTAtxk?si=y6-aH7HSVihumIGS"
     }
+    const caracteristicasText: CaracteristicasTextTyte = {
+        header: "Características do Aurea Residencial",
+        list: [
+            { title: "Piscina Adulto Com Raia" },
+            { title: "Piscina Infantil" },
+            { title: "Playground", },
+            { title: "Quadra De Esportes Infantil" },
+            { title: "2 Churrasqueiras" },
+            { title: "Academia" },
+            { title: "Bicicletário" },
+            { title: "Salão De Festas" }
+        ]
+    };
     const PromotionalVideoTexts = {
         firstText: "Conheça o condomínio",
         paragraph: "",
@@ -112,7 +125,7 @@ export function AureaResidencial() {
                 </div>
             </HeroSlider>
             <PromotionalVideo PromotionalVideoTexts={TourVideoTexts} />
-            <Caracteristicas />
+            <Caracteristicas texts={caracteristicasText} className='bg-amber-900' />
             <PromotionalVideo PromotionalVideoTexts={PromotionalVideoTexts} />
             <Membership MembershipPlans={MembershipPlans} />
             <Contact ContactTexts={ContactTexts} />

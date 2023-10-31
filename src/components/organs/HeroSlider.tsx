@@ -11,9 +11,10 @@ import { Slide, Zoom } from "react-awesome-reveal";
 export type HeroText = {
     Heading: string;
     Paragraph: string;
-    Button: string;
+    Button?: string;
     image: string;
 }
+//TODO - Change colors to props
 export default function HeroSlider({ HeroTexts,children }: { HeroTexts: HeroText[],children?: React.ReactNode }) {
 
     const sliderRef = useRef<Slider | null>();
