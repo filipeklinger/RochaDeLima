@@ -40,7 +40,7 @@ const NavBar = () => {
                         <List className="w-full text-base">
                             <NavLink to='/' className={`relative inline-block  px-2 whitespace-nowrap text-white uppercase text-xs font-bold transition-all duration-200 hover:text-amber-500 before:w-0 before:h-0.5 before:bg-gradient-to-r from-red-500 to-amber-500 before:absolute before:-bottom-[2.93rem] before:left-0 before:transition-all before:duration-200 before:ease-in hover:before:left-0.5`}>Inicio</NavLink>
                         </List>
-                        
+
                         {
                             NavLinks.map((navlink, index) => (
                                 <List className="w-full text-base" key={index}>
@@ -77,6 +77,9 @@ const NavBar = () => {
                             </div>
                         </div>
                         <ul className="flex flex-col gap-3 pl-5">
+                            <List className="w-full text-base" >
+                                <NavLink to='/' onClick={handleToggle} className={`relative overflow-hidden inline-block text-white before:w-full before:h-0.5 before:bg-color2 before:absolute before:bottom-0 before:-left-full before:rounded-full before:transition-all before:duration-200 before:ease-in hover:before:left-0 `}>Inicio</NavLink>
+                            </List>
                             {
                                 NavLinks.map((navlink, index) => (
                                     <List className="w-full text-base" key={index}>
