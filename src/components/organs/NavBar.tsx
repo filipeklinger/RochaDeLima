@@ -5,16 +5,20 @@ import { NavLink } from "react-router-dom";
 import { ArrowCircleRight, CirclesFour } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
+import Dropdown from "../molecules/Dropdown";
 
 
 const NavBar = () => {
 
-    const [open, setOpen] = useState(false)
-
+    const [open, setOpen] = useState(false);
+    const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
     const [navBarColor, setNavBarColor] = useState(false)
 
     const handleToggle = () => {
         setOpen(!open)
+    }
+    const handleTogleDropdown = () => {
+        setDropdownIsOpen(!dropdownIsOpen)
     }
 
     const listenScrollEvent = () => {
@@ -28,7 +32,6 @@ const NavBar = () => {
         };
     }, []);
 
-
     return (
         <header className="w-full h-auto bg-transparent overflow-x-hidden fixed z-50 top-0 left-0">
             <nav className={`w-full lg:h-28 md:h-24 h-20 ${navBarColor ? "bg-zinc-900" : " bg-transparent"} lg:px-16 md:px-9 px-8 flex justify-between items-center`}>
@@ -40,14 +43,9 @@ const NavBar = () => {
                         <List className="w-full text-base">
                             <NavLink to='/' className={`relative inline-block  px-2 whitespace-nowrap text-white uppercase text-xs font-bold transition-all duration-200 hover:text-amber-500 before:w-0 before:h-0.5 before:bg-gradient-to-r from-red-500 to-amber-500 before:absolute before:-bottom-[2.93rem] before:left-0 before:transition-all before:duration-200 before:ease-in hover:before:left-0.5`}>Inicio</NavLink>
                         </List>
-
-                        {
-                            NavLinks.map((navlink, index) => (
-                                <List className="w-full text-base" key={index}>
-                                    <NavLink to={navlink.url} className={`relative inline-block  px-2 whitespace-nowrap text-white uppercase text-xs font-bold transition-all duration-200 hover:text-amber-500 before:w-0 before:h-0.5 before:bg-gradient-to-r from-red-500 to-amber-500 before:absolute before:-bottom-[2.93rem] before:left-0 before:transition-all before:duration-200 before:ease-in hover:before:left-0.5`}>{navlink.name}</NavLink>
-                                </List>
-                            ))
-                        }
+                        <div className="cursor-pointer w-full text-base" onClick={handleTogleDropdown}>
+                            <span className={`relative inline-block  px-2 whitespace-nowrap text-white uppercase text-xs font-bold transition-all duration-200 hover:text-amber-500 before:w-0 before:h-0.5 before:bg-gradient-to-r from-red-500 to-amber-500 before:absolute before:-bottom-[2.93rem] before:left-0 before:transition-all before:duration-200 before:ease-in hover:before:left-0.5`}>Empreendimentos</span>
+                        </div>
                         <List className="w-full text-base">
                             <NavLink to='/about' className={`relative inline-block  px-2 whitespace-nowrap text-white uppercase text-xs font-bold transition-all duration-200 hover:text-amber-500 before:w-0 before:h-0.5 before:bg-gradient-to-r from-red-500 to-amber-500 before:absolute before:-bottom-[2.93rem] before:left-0 before:transition-all before:duration-200 before:ease-in hover:before:left-0.5`}>Sobre</NavLink>
                         </List>
@@ -61,9 +59,7 @@ const NavBar = () => {
                     <CirclesFour size={30} color="currentColor" weight="light" />
                 </div>
             </nav>
-
-
-
+            <Dropdown menuItems={NavLinks} isOpen={dropdownIsOpen} onClose={() => setDropdownIsOpen(false)} />
             {/* Mobile Nav  */}
             <nav className={`flex justify-end lg:hidden h-screen w-full bg-gray-950/90 fixed top-0  ${open ? "right-0" : "-right-[120vw]"} transition-all duration-500 ease-out`}>
                 <div className={`w-full md:w-[50%] h-screen bg-zinc-900 flex flex-col justify-between items-center relative ${open ? "right-0" : "-right-[120vw]"} transition-all duration-500 ease-out delay-300`}>
