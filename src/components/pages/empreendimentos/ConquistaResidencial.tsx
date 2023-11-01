@@ -11,6 +11,7 @@ import Guarita from '../../../assets/images/empreendimentos/conquista-residencia
 import Piscina from '../../../assets/images/empreendimentos/conquista-residencial/piscina.jpg';
 import Academia from '../../../assets/images/empreendimentos/conquista-residencial/academia.jpg';
 import QuadraEsportes from '../../../assets/images/empreendimentos/conquista-residencial/quadra-esportes.jpg';
+import Blogs from '../../organs/Blogs';
 
 export function ConquistaResidencial() {
     const HeroTexts = [
