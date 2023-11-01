@@ -7,6 +7,7 @@ import { Button } from "../atoms/Button";
 import { ArrowCircleLeft, ArrowCircleRight, WhatsappLogo } from "@phosphor-icons/react";
 import StickyIcons from "../molecules/StickyIcons";
 import { Slide, Zoom } from "react-awesome-reveal";
+import { openWhatsapp } from "../../utils/contactUtils";
 
 export type HeroText = {
     Heading: string;
@@ -14,9 +15,8 @@ export type HeroText = {
     Button?: string;
     image: string;
 }
-//TODO - Change colors to props
-export default function HeroSlider({ HeroTexts,children }: { HeroTexts: HeroText[],children?: React.ReactNode }) {
 
+export default function HeroSlider({ HeroTexts, children, empreendimento }: { HeroTexts: HeroText[], children?: React.ReactNode, empreendimento: string }) {
     const sliderRef = useRef<Slider | null>();
 
     // Function for next button
@@ -45,11 +45,6 @@ export default function HeroSlider({ HeroTexts,children }: { HeroTexts: HeroText
         cssEase: "linear",
     };
 
-    function openWhatsapp() {
-        const phone = "+5521975749247";
-        window.open(`https://api.whatsapp.com/send?phone=${phone}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20empreendimento%20Aurea%20Residencial.`, "_blank");
-    }
-
     return (
         <section className="w-full h-auto bg-gradient-to-r from-red-500 to-amber-500 relative overflow-x-hidden">
             <div className="flex justify-start items-center lg:justify-center w-full lg:max-h-28 md:max-h-24 max-h-20">
@@ -76,7 +71,7 @@ export default function HeroSlider({ HeroTexts,children }: { HeroTexts: HeroText
                                 </Text>
                                 <div className="flex justify-center items-center gap-8">
                                     <Slide direction="up">
-                                        <Button onClick={openWhatsapp} type="button" className="flex items-center justify-center  px-10 font-medium text-white py-2.5 bg-gradient-to-r  from-red-500 to-amber-500">
+                                        <Button onClick={() => openWhatsapp("Olá, Gostaria de saber mais sobre o " + empreendimento)} type="button" className="flex items-center justify-center  px-10 font-medium text-white py-2.5 bg-gradient-to-r from-red to-amber">
                                             Marque sua visita &nbsp;
                                             <WhatsappLogo size={25} color="currentColor" weight="fill" />
                                         </Button>

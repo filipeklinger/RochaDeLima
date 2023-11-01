@@ -13,8 +13,6 @@ import Academia from '../../../assets/images/empreendimentos/conquista-residenci
 import QuadraEsportes from '../../../assets/images/empreendimentos/conquista-residencial/quadra-esportes.jpg';
 
 export function ConquistaResidencial() {
-    // const pageMainColor = "#0160BA";
-    // const pageSecondaryColor = "#188D7A";
     const HeroTexts = [
         {
             Heading: "Apartamentos de 1 e 2 quartos",
@@ -153,9 +151,9 @@ export function ConquistaResidencial() {
     }
     return (
         <div className="min-h-screen">
-            <HeroSlider HeroTexts={HeroTexts} >
+            <HeroSlider HeroTexts={HeroTexts} empreendimento='Conquista Parque Iguaçu' >
                 <div className="w-screen bg-[#0160BA] p-5">
-                    <div className="pl-16 md:pl-36">
+                    <div className="pl-20 md:pl-40">
                         <img className='lg:max-h-28 md:max-h-24 max-h-20' src={Logo} alt="Conquista logo" />
                     </div>
                 </div>

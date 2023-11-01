@@ -117,7 +117,7 @@ export function AureaResidencial() {
     }
     return (
         <div className="min-h-screen">
-            <HeroSlider HeroTexts={HeroTexts} >
+            <HeroSlider HeroTexts={HeroTexts} empreendimento='Aurea Residencial'>
                 <div className="w-screen bg-[#EDAA04] p-5">
                     <div className="pl-16 md:pl-36">
                         <img src={AureaLogo} alt="Aurea logo" />
