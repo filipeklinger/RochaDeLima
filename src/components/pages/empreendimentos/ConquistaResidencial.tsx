@@ -46,9 +46,9 @@ export function ConquistaResidencial() {
         secondText: "Escolha o melhor para você",
         cards: [
             {
+                caption: "1 quarto a partir de",
                 amount: 197,
                 unity: "mil",
-                caption: "1 quarto a partir de",
                 benefits: [
                     "Condomínio com lazer completo",
                     "Entrada a partir de R$ 999",
@@ -65,9 +65,9 @@ export function ConquistaResidencial() {
                 contactMsg: "Gostaria de saber mais sobre os apartamentos de 1 quarto no Conquista Parque Iguaçu."
             },
             {
+                caption: "2 quartos",
                 amount: 0,
                 unity: "",
-                caption: "2 quartos",
                 benefits: [
                     "Condomínio com lazer completo",
                     "Entregue com Piso",

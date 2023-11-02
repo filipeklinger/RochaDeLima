@@ -10,6 +10,7 @@ import Home from "./components/pages/Home";
 import Footer from "./components/organs/Footer";
 import { AureaResidencial } from "./components/pages/empreendimentos/AureaResidencial";
 import { ConquistaResidencial } from "./components/pages/empreendimentos/ConquistaResidencial";
+import { BeijaFlorResidencial } from "./components/pages/empreendimentos/BeijaflorResidencial";
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/aurea-residencial" element={<AureaResidencial />} />
         <Route path="/conquista-residencial" element={<ConquistaResidencial />} />
+        <Route path="/beija-flor-residencial" element={<BeijaFlorResidencial />} />
       </Routes>
       <Footer />
     </div>
