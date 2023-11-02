@@ -19,7 +19,7 @@ const Galery = ({ GaleryTexts }: { GaleryTexts: GaleryTextsType }) => {
         initialSlide: 0,
         autoplay: true,
         autoplaySpeed: 5000,
-        pauseOnHover: true,
+        pauseOnHover: false,
         cssEase: "linear",
         nextArrow: <br />,
         prevArrow: <br />,
