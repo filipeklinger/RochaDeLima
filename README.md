@@ -2,7 +2,7 @@
 
 # Gym Landing Page - React and TypeScript
 
-This is a gym landing page built using React and TypeScript, aimed at showcasing the gym's services and attracting potential customers. It features a modern and responsive design, providing an excellent user experience across various devices.
+Rocha Lima landing page criado usando React and TypeScript, Possui um design moderno e responsivo, proporcionando uma excelente experiência ao usuário em diversos dispositivos.
 
 ## Table of Contents
 
@@ -17,25 +17,25 @@ This is a gym landing page built using React and TypeScript, aimed at showcasing
 
 ## Getting Started
 
-To get a copy of this project up and running on your local machine, follow the installation instructions provided below.
+Para obter uma cópia deste projeto instalada e funcionando em sua máquina local, siga as instruções de instalação fornecidas abaixo.
 
 ## Prerequisites
 
-Before proceeding with the installation, make sure you have the following prerequisites:
+Antes de prosseguir com a instalação, certifique-se de atender aos seguintes pré-requisitos:
 
 - Node.js (v14.x.x or higher)
 - npm (v6.x.x or higher) or yarn (v1.x.x or higher)
 
 ## Installation
 
-1. Clone the repository to your local machine:
+1. Clone o repositório em sua máquina local:
 
 ```bash
-git clone https://github.com/your-username/gym-landing-page.git
-cd gym-landing-page
+git clone https://github.com/filipeklinger/RochaDeLima.git
+cd RochaDeLima
 ```
 
-2. Install the project dependencies:
+2. Instale as dependências do projeto:
 
 Using npm:
 
@@ -43,50 +43,32 @@ Using npm:
 npm install
 ```
 
-Or using yarn:
-
-```bash
-yarn install
-```
-
 ## Usage
 
-To start the development server, run the following command:
+Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
 Using npm:
 
 ```bash
-npm start
+npm run dev
 ```
 
-Or using yarn:
-
-```bash
-yarn start
-```
-
-The application will now be accessible at `http://localhost:3000/` in your web browser.
+O aplicativo agora estará acessível em `http://localhost:5173/` em seu navegador.
 
 ## Features
 
-- Responsive design for seamless viewing on desktops, tablets, and mobile devices.
-- Interactive components and animations to enhance user engagement.
-- Integration with external APIs for displaying gym class schedules, promotions, etc.
-- TypeScript for type checking and enhanced code maintainability.
-- BMI calculator.
+- Design responsivo para visualização perfeita em desktops, tablets e dispositivos móveis.
+- Componentes interativos e animações para aumentar o envolvimento do usuário.
+- TypeScript para verificação de tipo e maior capacidade de manutenção do código.
 
-## Technologies Used
+## Tecnologias Utilizadas
 
-- React - JavaScript library for building user interfaces.
-- TypeScript - Superset of JavaScript that adds static typing to the language.
-- HTML5 - Markup language for structuring web pages.
-- TailwindCSS - CSS framework for designing web pages.
-- Vite - a frontend tool that is used for building fast and optimized web applications.
-
-## Contributing
-
-We welcome contributions from the community to improve this project further. To contribute, please follow our [Contribution Guidelines](CONTRIBUTING.md).
+- React – biblioteca JavaScript para construção de interfaces de usuário.
+- TypeScript - Superconjunto de JavaScript que adiciona digitação estática à linguagem.
+- HTML5 – Linguagem de marcação para estruturação de páginas web.
+- TailwindCSS - framework CSS para design de páginas web.
+- Vite - uma ferramenta frontend usada para construir aplicativos web rápidos e otimizados.
 
 ## Demo
 
-[View Demo](https://gym-nex.vercel.app/)
+[View Demo](https://rochalima.vercel.app/)
