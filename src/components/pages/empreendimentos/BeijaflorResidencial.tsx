@@ -2,7 +2,7 @@
 import Caracteristicas, { CaracteristicasTextTyte } from '../../organs/Caracteristicas';
 import HeroSlider from '../../organs/HeroSlider';
 import Membership from '../../organs/Membership';
-import PromotionalVideo from '../../organs/PromotionalVideo';
+// import PromotionalVideo from '../../organs/PromotionalVideo';
 import Contact from '../../organs/Contact';
 
 import Logo from '../../../assets/images/empreendimentos/beijaflor-residencial/logotipo-beija-flor.png';

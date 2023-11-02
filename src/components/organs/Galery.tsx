@@ -1,9 +1,7 @@
 import { Text } from "../atoms/Text"
-import { useCallback } from "react";
 import Slider from "react-slick";
 import { Card } from "../molecules/Card";
 import { Image } from "../atoms/Image";
-import { Star, StarHalf } from "@phosphor-icons/react";
 
 type GaleryTextsType = {
     firstText: string;
