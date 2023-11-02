@@ -81,9 +81,6 @@ const Home = () => {
             <About />
             <Offers />
             <Membership MembershipPlans={MembershipPlans} />
-            {/* <Calculator /> */}
-            {/* <Testimonials /> */}
-            {/* <Blogs /> */}
             <Contact ContactTexts={ContactTexts} />
         </>
     )
