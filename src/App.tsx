@@ -12,22 +12,19 @@ import { AureaResidencial } from "./components/pages/empreendimentos/AureaReside
 import { ConquistaResidencial } from "./components/pages/empreendimentos/ConquistaResidencial";
 import { BeijaFlorResidencial } from "./components/pages/empreendimentos/BeijaflorResidencial";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
-import ReactPixel from 'react-facebook-pixel';
 import { Link } from "react-router-dom";
 import { PoliticaDePrivacidade } from "./components/pages/PoliticaDePrivacidade";
 
 function App() {
-  // const advancedMatching = { em: 'some@email.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
-  const options = {
-    autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
-    debug: false, // enable logs
-  };
-  ReactPixel.init('1101028314608880', undefined, options);
-  ReactPixel.revokeConsent();
   useEffect(() => {
     const cookie = getCookieConsentValue("acepptedCookiesRocha1101028314608880") == "true";
-    if (cookie) ReactPixel.grantConsent();
-  })
+    if (cookie) {
+      console.log("cookie aceito");
+    } else {
+      console.log("cookie não aceito");
+    }
+  });
+
   const directory = useLocation();
   useEffect(() => {
     animateScroll.scrollToTop({
@@ -39,9 +36,8 @@ function App() {
     return (acceptedByScrolling) => {
       if (acceptedByScrolling) {
         // triggered if user scrolls past threshold
-        alert("Accept was triggered by user scrolling");
+        console.log("Accept was triggered by user scrolling");
       }
-      ReactPixel.grantConsent()
     };
   }
 

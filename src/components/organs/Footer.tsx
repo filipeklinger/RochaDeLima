@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Text } from "../atoms/Text"
-import { House, MapPin, Phone } from "@phosphor-icons/react"
+import { Eye, House, MapPin, Phone } from "@phosphor-icons/react"
 import { List } from "../atoms/List"
 import { openWhatsapp } from "../../utils/contactUtils"
 import { NavLinks, SocialMediaLinks } from "../particles/Data"
@@ -89,6 +89,11 @@ const Footer = () => {
                             </List>
 
                         ))}
+                        <List className="text-zinc-400 flex items-start gap-2" >
+                            <Link to={"/politica"} className="flex items-start gap-2 transition-all duration-200 hover:text-red-500">
+                                <Text as="span" className="text-amber-500 mt-1"><Eye size={20} color="currentColor" /></Text>
+                                Politica de privacidade</Link>
+                        </List>
                     </ul>
                 </div>
             </main>
