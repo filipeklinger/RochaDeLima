@@ -24,6 +24,11 @@ export const NavLinks: {
         url: "/morada-da-colina",
         type: "Building"
     },
+    {
+        name: "Residence Vale Do Sol",
+        url: "/vale-do-sol",
+        type: "Building"
+    },
 ];
 
 export const SocialMediaLinks = [

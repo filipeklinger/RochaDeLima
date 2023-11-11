@@ -15,6 +15,7 @@ import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import { Link } from "react-router-dom";
 import { PoliticaDePrivacidade } from "./components/pages/PoliticaDePrivacidade";
 import { MrvMoradaDaColina } from "./components/pages/empreendimentos/MrvMoradaDaColina";
+import { MrvValeDoSol } from "./components/pages/empreendimentos/MrvValeDoSol";
 
 function App() {
   useEffect(() => {
@@ -51,6 +52,7 @@ function App() {
         <Route path="/conquista-residencial" element={<ConquistaResidencial />} />
         <Route path="/beija-flor-residencial" element={<BeijaFlorResidencial />} />
         <Route path="/morada-da-colina" element={<MrvMoradaDaColina />} />
+        <Route path="/vale-do-sol" element={<MrvValeDoSol />} />
         <Route path="/politica" element={<PoliticaDePrivacidade />} />
       </Routes>
       <Footer />
