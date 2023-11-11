@@ -12,7 +12,7 @@ import LazerExternoPetPlace from '../../../assets/images/empreendimentos/mrvMora
 import InsercaoValeDoSolMoradaDa from '../../../assets/images/empreendimentos/mrvMoradaDaColina/insercao_vale_do_sol_morada_da.webp';
 
 //galeria
-import FotoInsercaoV02 from '../../../assets/images/empreendimentos/mrvMoradaDaColina/foto_insercao_v02.webp';
+// import FotoInsercaoV02 from '../../../assets/images/empreendimentos/mrvMoradaDaColina/foto_insercao_v02.webp';
 import SalaV02 from '../../../assets/images/empreendimentos/mrvMoradaDaColina/sala_v02.webp';
 import GaleriaBanheiro from '../../../assets/images/empreendimentos/mrvMoradaDaColina/galeria_banheiro.webp';
 import GaleriaCozinha from '../../../assets/images/empreendimentos/mrvMoradaDaColina/galeria_cozinha.webp';
@@ -23,6 +23,7 @@ import GaleriaPlantaPadrao from '../../../assets/images/empreendimentos/mrvMorad
 
 
 import Galery from '../../organs/Galery';
+import PromotionalVideo from '../../organs/PromotionalVideo';
 
 export function MrvMoradaDaColina() {
     const HeroTexts = [
@@ -36,11 +37,11 @@ export function MrvMoradaDaColina() {
             Paragraph: "",
             image: Fachada,
         },
-        {
-            Heading: "Vista aérea",
-            Paragraph: "localização do Residencial Morada Da Colina",
-            image: FachadaEntardecer,
-        },
+        // {
+        //     Heading: "Vista aérea",
+        //     Paragraph: "localização do Residencial Morada Da Colina",
+        //     image: FotoInsercaoV02,
+        // },
         {
             Heading: "Bicicletário",
             Paragraph: "",
@@ -65,8 +66,15 @@ export function MrvMoradaDaColina() {
             GaleriaQuartoCasal,
             GaleriaQuartoSolteiro,
             GaleriaGardem,
+            FachadaEntardecer,
             GaleriaPlantaPadrao,
-            FotoInsercaoV02]
+            ]
+    };
+
+    const PromotionalVideoTexts = {
+        firstText: "Conheça o Residencial Morada Da Colina",
+        secondText: "sua casa própria está aqui",
+        videoUrl: "https://www.youtube.com/embed/SLhWCcikjWY?si=8LpQO11t0tdFnqS_"
     };
 
     const ValuePlans = {
@@ -90,7 +98,7 @@ export function MrvMoradaDaColina() {
                     "Revestimento das áreas molhadas",
                     "Forro de gesso no banheiro"
                 ],
-                contactMsg: "Gostaria de saber mais sobre a casa de 2 quartos no Residencial Morada Da Colina."
+                contactMsg: "Gostaria de saber mais sobre o apartamento de 2 quartos no Residencial Morada Da Colina."
             },
         ]
     }
@@ -178,7 +186,7 @@ export function MrvMoradaDaColina() {
             <Caracteristicas texts={caracteristicasCondominioText} className='bg-[#006B3F] ' />
             <Galery GaleryTexts={GaleryTexts} />
             <Caracteristicas texts={caracteristicasText} className='bg-[#006B3F] ' />
-            {/* <PromotionalVideo PromotionalVideoTexts={PromotionalVideoTexts} /> */}
+            <PromotionalVideo PromotionalVideoTexts={PromotionalVideoTexts} />
 
             <Membership MembershipPlans={ValuePlans} />
             <Contact ContactTexts={ContactTexts} />
