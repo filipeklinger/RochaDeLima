@@ -19,6 +19,11 @@ export const NavLinks: {
         url: "/beija-flor-residencial",
         type: "House"
     },
+    {
+        name: "Morada Da colina",
+        url: "/morada-da-colina",
+        type: "Building"
+    },
 ];
 
 export const SocialMediaLinks = [

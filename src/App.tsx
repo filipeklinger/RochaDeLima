@@ -14,6 +14,7 @@ import { BeijaFlorResidencial } from "./components/pages/empreendimentos/Beijafl
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import { Link } from "react-router-dom";
 import { PoliticaDePrivacidade } from "./components/pages/PoliticaDePrivacidade";
+import { MrvMoradaDaColina } from "./components/pages/empreendimentos/MrvMoradaDaColina";
 
 function App() {
   useEffect(() => {
@@ -49,6 +50,7 @@ function App() {
         <Route path="/aurea-residencial" element={<AureaResidencial />} />
         <Route path="/conquista-residencial" element={<ConquistaResidencial />} />
         <Route path="/beija-flor-residencial" element={<BeijaFlorResidencial />} />
+        <Route path="/morada-da-colina" element={<MrvMoradaDaColina />} />
         <Route path="/politica" element={<PoliticaDePrivacidade />} />
       </Routes>
       <Footer />
