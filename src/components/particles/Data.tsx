@@ -29,6 +29,11 @@ export const NavLinks: {
         url: "/vale-do-sol",
         type: "Building"
     },
+    {
+        name: "Kastell Petrópolis",
+        url: "/kastell",
+        type: "Building"
+    }
 ];
 
 export const SocialMediaLinks = [

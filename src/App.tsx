@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import { PoliticaDePrivacidade } from "./components/pages/PoliticaDePrivacidade";
 import { MrvMoradaDaColina } from "./components/pages/empreendimentos/MrvMoradaDaColina";
 import { MrvValeDoSol } from "./components/pages/empreendimentos/MrvValeDoSol";
+import { KastellPetropolis } from "./components/pages/empreendimentos/KastellPetropolis";
 
 function App() {
   useEffect(() => {
@@ -54,6 +55,7 @@ function App() {
         <Route path="/morada-da-colina" element={<MrvMoradaDaColina />} />
         <Route path="/vale-do-sol" element={<MrvValeDoSol />} />
         <Route path="/politica" element={<PoliticaDePrivacidade />} />
+        <Route path="/kastell" element={<KastellPetropolis />} />
       </Routes>
       <Footer />
       <CookieConsent
