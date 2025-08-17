@@ -1,4 +1,3 @@
-import { CaracteristicasTextTyte } from '../../organs/Caracteristicas';
 import HeroSlider from '../../organs/HeroSlider';
 
 import Fachada from '../../../assets/images/empreendimentos/kastell/fachadadia.jpg';
