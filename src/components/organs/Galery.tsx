@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Card } from "../molecules/Card";
 import { Image } from "../atoms/Image";
 import { useState } from "react";
+import { CaretLeft, CaretRight } from "@phosphor-icons/react";
 
 type GaleryTextsType = {
     firstText: string;
@@ -20,6 +21,21 @@ const Galery = ({ GaleryTexts }: { GaleryTexts: GaleryTextsType }) => {
         setSelectedImage(null);
     };
 
+    const navigateImage = (direction: "prev" | "next") => {
+        if (!selectedImage) return;
+
+        const currentIndex = GaleryTexts.photos.indexOf(selectedImage);
+        let newIndex;
+
+        if (direction === "prev") {
+            newIndex = (currentIndex - 1 + GaleryTexts.photos.length) % GaleryTexts.photos.length;
+        } else {
+            newIndex = (currentIndex + 1) % GaleryTexts.photos.length;
+        }
+
+        setSelectedImage(GaleryTexts.photos[newIndex]);
+    };
+
     // Slider settings
     const settings = {
         dots: true,
@@ -30,7 +46,7 @@ const Galery = ({ GaleryTexts }: { GaleryTexts: GaleryTextsType }) => {
         initialSlide: 0,
         autoplay: true,
         autoplaySpeed: 5000,
-        pauseOnHover: false,
+        pauseOnHover: true,
         cssEase: "linear",
         nextArrow: <br />,
         prevArrow: <br />,
@@ -101,6 +117,24 @@ const Galery = ({ GaleryTexts }: { GaleryTexts: GaleryTextsType }) => {
                                 className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-red-500 transition-colors duration-200 z-10"
                             >
                                 ×
+                            </button>
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    navigateImage("prev");
+                                }}
+                                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-amber-500 transition-colors duration-200 z-10"
+                            >
+                                <CaretLeft size={32} />
+                            </button>
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    navigateImage("next");
+                                }}
+                                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-amber-500 transition-colors duration-200 z-10"
+                            >
+                                <CaretRight size={32} />
                             </button>
                             <Image 
                                 image={selectedImage} 
