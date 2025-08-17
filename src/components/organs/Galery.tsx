@@ -2,6 +2,7 @@ import { Text } from "../atoms/Text"
 import Slider from "react-slick";
 import { Card } from "../molecules/Card";
 import { Image } from "../atoms/Image";
+import { useState } from "react";
 
 type GaleryTextsType = {
     firstText: string;
@@ -9,6 +10,16 @@ type GaleryTextsType = {
     photos: string[];
 }
 const Galery = ({ GaleryTexts }: { GaleryTexts: GaleryTextsType }) => {
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+    const openFullscreen = (image: string) => {
+        setSelectedImage(image);
+    };
+
+    const closeFullscreen = () => {
+        setSelectedImage(null);
+    };
+
     // Slider settings
     const settings = {
         dots: true,
@@ -66,7 +77,7 @@ const Galery = ({ GaleryTexts }: { GaleryTexts: GaleryTextsType }) => {
                     <Slider {...settings}>
                         {
                             GaleryTexts.photos.map((photo, index) => (
-                                <div key={index} className="lg:px-6 md:px-4 w-full px-3">
+                                <div key={index} className="lg:px-6 md:px-4 w-full px-3" onClick={() => openFullscreen(photo)}>
                                     <Card className="bg-zinc-800 w-full h-full border-[0.01rem] border-amber-500/30">
 
                                         <Image className="col-span-2" objectCover="object-cover" image={photo} alt={'photo.title' + index} />
@@ -77,6 +88,29 @@ const Galery = ({ GaleryTexts }: { GaleryTexts: GaleryTextsType }) => {
                         }
                     </Slider>
                 </div>
+
+                {/* Modal Fullscreen */}
+                {selectedImage && (
+                    <div 
+                        className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4"
+                        onClick={closeFullscreen}
+                    >
+                        <div className="relative max-w-7xl max-h-full">
+                            <button
+                                onClick={closeFullscreen}
+                                className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-red-500 transition-colors duration-200 z-10"
+                            >
+                                ×
+                            </button>
+                            <Image 
+                                image={selectedImage} 
+                                alt="Imagem em tela cheia"
+                                className="max-w-full max-h-[90vh] rounded-lg"
+                                objectCover="object-contain"
+                            />
+                        </div>
+                    </div>
+                )}
 
             </main>
 
