@@ -65,19 +65,6 @@ export function KastellPetropolis() {
 
     ];
     
-    const caracteristicasText: CaracteristicasTextTyte = {
-        header: "Características do Kastell",
-        list: [
-            { title: "Piscina Adulto Com Raia" },
-            { title: "Piscina Infantil" },
-            { title: "Playground", },
-            { title: "Sauna" },
-            { title: "Academia" },
-            { title: "Bicicletário" },
-            { title: "Salão De Festas" }
-        ]
-    };
-
     const Plantas: PlantasType = {
         firstText: "Plantas",
         secondText: "UNIDADES COM VARANDA, 2 QUARTOS, SENDO UMA SUÍTE",
