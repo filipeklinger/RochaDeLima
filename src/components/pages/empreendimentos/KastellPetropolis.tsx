@@ -13,9 +13,22 @@ import PlantaNormal from '../../../assets/images/empreendimentos/kastell/ponta.j
 import PlantaPcd from '../../../assets/images/empreendimentos/kastell/plantapcd.jpg';
 import PlantaPontaGarden from '../../../assets/images/empreendimentos/kastell/pontagarden.jpg';
 
+import Galeria1 from '../../../assets/images/empreendimentos/kastell/sala.jpg';
+import Galeria2 from '../../../assets/images/empreendimentos/kastell/sala2.jpg';
+import Galeria3 from '../../../assets/images/empreendimentos/kastell/piscina.jpg';
+import Galeria5 from '../../../assets/images/empreendimentos/kastell/piscina3.jpg';
+import Galeria6 from '../../../assets/images/empreendimentos/kastell/sauna.jpg';
+import Galeria7 from '../../../assets/images/empreendimentos/kastell/salaodefesta.jpg';
+import Galeria8 from '../../../assets/images/empreendimentos/kastell/salaodejogos.jpg';
+import Galeria9 from '../../../assets/images/empreendimentos/kastell/varanda.jpg';
+import Galeria10 from '../../../assets/images/empreendimentos/kastell/zen.jpg';
+import Galeria11 from '../../../assets/images/empreendimentos/kastell/marketplace.jpg';
+import Galeria12 from '../../../assets/images/empreendimentos/kastell/binquedoteca.jpg';
+import Galeria13 from '../../../assets/images/empreendimentos/kastell/playground.jpg';
 
 import Contact from '../../organs/Contact';
 import PlantasComponent, { PlantasType } from '../../organs/Plantas';
+import Galery from '../../organs/Galery';
 
 export function KastellPetropolis() {
     const HeroTexts = [
@@ -107,6 +120,14 @@ export function KastellPetropolis() {
             }
         ]
     };
+
+    const GaleryTexts = {
+        firstText: "Galeria de Fotos",
+        secondText: "",
+        photos: [
+            Galeria1, Galeria2, Galeria3, Galeria5, Galeria6, Galeria7, Galeria8, Galeria9, Galeria10, Galeria11, Galeria12, Galeria13
+        ]
+    };
     
     const ContactTexts = {
         firstText: "Contato",
@@ -124,7 +145,8 @@ export function KastellPetropolis() {
                     </div>
                 </div>
             </HeroSlider>
-            <Caracteristicas texts={caracteristicasText} className='bg-amber-900' />
+            {/* <Caracteristicas texts={caracteristicasText} className='bg-amber-900' /> */}
+            <Galery GaleryTexts={GaleryTexts} />
             <PlantasComponent PlantasData={Plantas} />
             <Contact ContactTexts={ContactTexts} />
         </div>
